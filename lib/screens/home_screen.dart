@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:untitled/screens/login_screen.dart';
+import 'package:untitled/screens/profile_screen.dart';
 import 'package:video_player/video_player.dart';
 import 'package:untitled/screens/settings_screen.dart';
 //import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -64,7 +65,7 @@ _pickVideo() async {
 
               onSelected:(value){
                 if(value == 1){
-                  Navigator.push(context,MaterialPageRoute(builder: (context) => const SettingsScreen()));
+                  Navigator.push(context,MaterialPageRoute(builder: (context) => const ProfileScreen()));
 
                 }
                 else {
