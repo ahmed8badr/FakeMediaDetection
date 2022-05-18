@@ -18,10 +18,10 @@
 @import url_launcher_ios;
 #endif
 
-#if __has_include(<video_player/FLTVideoPlayerPlugin.h>)
-#import <video_player/FLTVideoPlayerPlugin.h>
+#if __has_include(<video_player_avfoundation/FLTVideoPlayerPlugin.h>)
+#import <video_player_avfoundation/FLTVideoPlayerPlugin.h>
 #else
-@import video_player;
+@import video_player_avfoundation;
 #endif
 
 @implementation GeneratedPluginRegistrant
