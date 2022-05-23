@@ -34,6 +34,7 @@ dependencies:
   video_player: ^2.2.17
   validators: ^3.0.0
   syncfusion_flutter_charts: ^20.1.55
+  firebase_core: ^1.17.0
 
 dev_dependencies:
   flutter_test:
