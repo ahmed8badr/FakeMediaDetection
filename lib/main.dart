@@ -1,4 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/screens/home_screen.dart';
+import 'package:untitled/screens/login_screen.dart';
 import 'package:untitled/screens/signup_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -20,20 +23,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Fake Media Detection',
-
-      routes: {
-        '/': (_) => const SignupScreen(),
-
-      },
       debugShowCheckedModeBanner: false,
-      // home: AuthenticationWrapper(),
+      home: MainPage(),
     );
   }
 }
 
-// class AuthenticationWrapper extends StatelessWidget{
-//   @override
-//   Widget build(BuildContext context){
-//     return Container();
-//   }
-// }
+class MainPage extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) => Scaffold(
+    body: StreamBuilder<User?>(
+      stream: FirebaseAuth.instance.authStateChanges(),
+      builder: (context, snapshot){
+        if(snapshot.hasData){
+          return HomeScreen();
+        } else {
+        return LoginScreen();
+        }
+      },
+    ),
+  );
+}

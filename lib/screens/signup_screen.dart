@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:untitled/screens/login_screen.dart';
-//import 'package:untitled/screens/login_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
@@ -138,8 +136,6 @@ class SignupScreen extends StatelessWidget {
                             ),
 
                             onPressed: () {
-                              Navigator.push(context,MaterialPageRoute(builder: (context) => const LoginScreen()),
-                              );
                             },
                           )
                       ),
@@ -176,8 +172,6 @@ class SignupScreen extends StatelessWidget {
                           style: TextStyle(fontSize: 15,color: Colors.white),
                         ),
                         onPressed: (){
-                          Navigator.push(context,MaterialPageRoute(builder: (context) => const LoginScreen()),
-                          );
                         },
                       )
                     ],
