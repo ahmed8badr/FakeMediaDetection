@@ -70,7 +70,7 @@ _pickVideo() async {
 
                 }
                 else {
-                  Navigator.push(context,MaterialPageRoute(builder: (context) => const LoginScreen()));
+                  // Navigator.push(context,MaterialPageRoute(builder: (context) => const LoginScreen()));
                 }
               }
               ,itemBuilder: (context) => [
@@ -251,10 +251,6 @@ _pickVideo() async {
                             ),
                           ),
                         ),
-                        // if(_video != null)
-                        //   _videoPlayerController.value.isInitialized ? AspectRatio(aspectRatio: _videoPlayerController.value.aspectRatio,
-                        //     child: VideoPlayer(_videoPlayerController),): Container()
-                        // else
 
                           Row(
                               children: [

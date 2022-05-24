@@ -1,25 +1,34 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:untitled/screens/home_screen.dart';
 import 'package:untitled/screens/signup_screen.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 
+class LoginScreen extends StatefulWidget {
+  @override
+_LoginScreenState createState() => _LoginScreenState();
+}
 
-class LoginScreen extends StatelessWidget {
-const LoginScreen({Key? key}) : super(key: key);
+class _LoginScreenState extends State<LoginScreen>{
+  final emailController = TextEditingController();
+  final passwordController=TextEditingController();
 
-void _launchURL(String _url) async =>
-    await launch(_url);
-@override
-Widget build(BuildContext context) {
+  @override
+  void dispose(){
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
   return Scaffold(
       backgroundColor: Colors.cyan[700],
 
       body:
       SafeArea(
       child: SingleChildScrollView(
-
 
       child:Column(
         children: [
@@ -54,7 +63,8 @@ Widget build(BuildContext context) {
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: TextField(
-            keyboardType: TextInputType.emailAddress,
+            controller: emailController,
+            // keyboardType: TextInputType.emailAddress,
             style: TextStyle(color: Colors.white),
             decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
@@ -79,6 +89,7 @@ Widget build(BuildContext context) {
           padding: const EdgeInsets.only(
               top: 1.0, left: 15.0, bottom: 15.0, right: 15.0),
           child: TextField(
+            controller: passwordController,
             obscureText: true,
             enableSuggestions: false,
             autocorrect: false,
@@ -113,8 +124,8 @@ Widget build(BuildContext context) {
                     ),
 
                     onPressed: () {
-                      Navigator.push(context,MaterialPageRoute(builder: (context) => const HomeScreen()),
-                      );
+                      signIn();
+                      // Navigator.push(context,MaterialPageRoute(builder: (context) => const HomeScreen();
                     },
                   )
               ),
@@ -135,9 +146,9 @@ Widget build(BuildContext context) {
           Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                IconButton(onPressed: () => _launchURL('https://www.gmail.com'), icon: FaIcon(FontAwesomeIcons.google),color: Colors.white,),
-                IconButton(onPressed: () => _launchURL('https://www.facebook.com'), icon: FaIcon(FontAwesomeIcons.facebook),color: Colors.white,),
-                IconButton(onPressed: ()=> _launchURL('https://www.twitter.com'), icon: FaIcon(FontAwesomeIcons.twitter),color: Colors.white,)
+                IconButton(onPressed: () {} , icon: FaIcon(FontAwesomeIcons.google),color: Colors.white,),
+                IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.facebook),color: Colors.white,),
+                IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.twitter),color: Colors.white,)
               ]
           ),
           Row(
@@ -162,4 +173,10 @@ Widget build(BuildContext context) {
   ),
       ),
   );
-}}
+}
+  Future signIn() async{
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailController.text.trim(),
+        password: passwordController.text.trim()
+    );
+  }}
