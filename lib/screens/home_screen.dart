@@ -52,11 +52,12 @@ _pickVideo() async {
     return DefaultTabController(
 
     length: 3,
-    child: Scaffold(
+        child: Scaffold(
         resizeToAvoidBottomInset : false,
         backgroundColor: Colors.cyan[700],
       appBar: AppBar(
         backgroundColor: Colors.blueGrey,
+        automaticallyImplyLeading: false,
         title: Text('FMD'),
         actions: [
           IconButton(onPressed: () { Navigator.push(context,MaterialPageRoute(builder: (context) => const SettingsScreen()),
@@ -243,24 +244,24 @@ _pickVideo() async {
 
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text('Upload a video from storage',
+                          child: Text('Choose a video from our library',
                             textAlign: TextAlign.left,
                             style: TextStyle(
                               color: Colors.white,
                             ),
                           ),
                         ),
-                        if(_video != null)
-                          _videoPlayerController.value.isInitialized ? AspectRatio(aspectRatio: _videoPlayerController.value.aspectRatio,
-                            child: VideoPlayer(_videoPlayerController),): Container()
-                        else
+                        // if(_video != null)
+                        //   _videoPlayerController.value.isInitialized ? AspectRatio(aspectRatio: _videoPlayerController.value.aspectRatio,
+                        //     child: VideoPlayer(_videoPlayerController),): Container()
+                        // else
 
                           Row(
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.fromLTRB(180,0,10,0),
                                   child: ElevatedButton (
-                                    child: Text("UPLOAD"),
+                                    child: Text("BROWSE"),
 
                                     style: ElevatedButton.styleFrom(
                                       primary: Colors.white,
@@ -268,7 +269,6 @@ _pickVideo() async {
                                     ),
 
                                     onPressed: () {
-                                      _pickVideo();
                                     },
                                   ),
                                 ),
@@ -304,15 +304,14 @@ _pickVideo() async {
                               ),
                             ),
                           ),
-                       
+
                           if(_image!=null)
                             Image.file(_image!)
                             else
-                              
+
                             Row(
                                 children: [
-                                  Padding(
-                                    padding: const EdgeInsets.fromLTRB(180,0,10,0),
+                                  Padding(padding: const EdgeInsets.fromLTRB(180,0,10,0),
                                     child: ElevatedButton (
                                       child: Text("UPLOAD"),
 
@@ -335,7 +334,6 @@ _pickVideo() async {
                 ),
                 ElevatedButton (
                   child: Text("GENERATE"),
-
                   style: ElevatedButton.styleFrom(
                     primary: Colors.white,
                     onPrimary: Colors.black,

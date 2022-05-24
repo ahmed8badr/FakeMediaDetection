@@ -26,6 +26,14 @@ class MyApp extends StatelessWidget {
 
       },
       debugShowCheckedModeBanner: false,
+      // home: AuthenticationWrapper(),
     );
   }
 }
+
+// class AuthenticationWrapper extends StatelessWidget{
+//   @override
+//   Widget build(BuildContext context){
+//     return Container();
+//   }
+// }
