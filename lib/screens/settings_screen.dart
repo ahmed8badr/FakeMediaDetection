@@ -6,11 +6,11 @@ class SettingsScreen extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.cyan[700],
+        backgroundColor: Color(0xff303F9F),
         appBar: AppBar(
-          backgroundColor: Colors.blueGrey,
-          leading: BackButton(color: Colors.white,onPressed: ()=> Navigator.pop(context, false)),
-          title: Text('Settings'),
+          backgroundColor: Colors.white,
+          leading: BackButton(color: Colors.pinkAccent,onPressed: ()=> Navigator.pop(context, false)),
+          title: Text('Settings',style: TextStyle(color: Color(0xff303F9F)),),
     ),
          body:
 
