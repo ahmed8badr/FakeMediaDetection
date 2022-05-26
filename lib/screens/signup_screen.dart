@@ -132,6 +132,11 @@ class SignupScreen extends StatelessWidget {
                             ),
 
                             onPressed: () {
+<<<<<<< HEAD
+=======
+                              Navigator.push(context,MaterialPageRoute(builder: (context) => const LoginScreen()),
+                              );
+>>>>>>> parent of 5607858 (gui)
                             },
                           )
                       ),
@@ -153,9 +158,15 @@ class SignupScreen extends StatelessWidget {
                   Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+<<<<<<< HEAD
                         IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.google),color: Colors.white,),
                         IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.facebook),color: Colors.white,),
                         IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.twitter),color: Colors.white,)
+=======
+                        IconButton(onPressed: () => _launchURL('https://www.gmail.com'), icon: FaIcon(FontAwesomeIcons.google),color: Colors.white,),
+                        IconButton(onPressed: () => _launchURL('https://www.facebook.com'), icon: FaIcon(FontAwesomeIcons.facebook),color: Colors.white,),
+                        IconButton(onPressed: ()=> _launchURL('https://www.twitter.com'), icon: FaIcon(FontAwesomeIcons.twitter),color: Colors.white,)
+>>>>>>> parent of 5607858 (gui)
                       ]
                   ),
                   Row(
@@ -168,6 +179,11 @@ class SignupScreen extends StatelessWidget {
                           style: TextStyle(fontSize: 15,color: Colors.white),
                         ),
                         onPressed: (){
+<<<<<<< HEAD
+=======
+                          Navigator.push(context,MaterialPageRoute(builder: (context) => const LoginScreen()),
+                          );
+>>>>>>> parent of 5607858 (gui)
                         },
                       )
                     ],
