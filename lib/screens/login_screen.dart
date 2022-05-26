@@ -102,13 +102,15 @@ Widget build(BuildContext context) {
             ),
           ),
                 Padding(
-                    padding: const EdgeInsets.only(top:40.0,bottom: 10.0, left: 100.0, right: 100.0),
+                    padding: const EdgeInsets.only(
+                        bottom: 10.0, left: 100.0, right: 100.0),
                     child: OutlinedButton(
 
                       child: Text('Sign In'),
                       style: OutlinedButton.styleFrom(
                         primary: Colors.white,
                         backgroundColor: Color(0xffFF4081),
+                        fixedSize: Size(100,40),
                         shape: const RoundedRectangleBorder(
                             borderRadius: BorderRadius.all(
                                 Radius.circular(10))),
