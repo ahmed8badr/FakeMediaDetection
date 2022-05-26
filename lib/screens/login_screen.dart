@@ -22,7 +22,7 @@ Widget build(BuildContext context) {
 
 
       child:Container(
-        padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+        padding: EdgeInsets.fromLTRB(0, 40, 0, 0),
         child: Column(
           children: [
             Column(
