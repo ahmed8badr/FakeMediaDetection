@@ -11,9 +11,12 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.cyan[700],
+<<<<<<< HEAD
       appBar: AppBar(
         backgroundColor: Colors.blueGrey,
         title: Text('Profile'),),
+=======
+>>>>>>> parent of b25f4e5 (final gui)
       body: SafeArea(
 
         child: Column(
