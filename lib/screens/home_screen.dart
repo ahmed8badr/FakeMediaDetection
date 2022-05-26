@@ -1,7 +1,7 @@
 import 'dart:io';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:untitled/screens/login_screen.dart';
 import 'package:untitled/screens/profile_screen.dart';
 import 'package:video_player/video_player.dart';
 import 'package:untitled/screens/settings_screen.dart';
@@ -52,30 +52,29 @@ _pickVideo() async {
     return DefaultTabController(
 
     length: 3,
-    child: Scaffold(
+        child: Scaffold(
         resizeToAvoidBottomInset : false,
         backgroundColor: Color(0xff303F9F),
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
+        automaticallyImplyLeading: false,
         title: Text('FMD'
-        ,style: TextStyle(
-            color: Color(0xff303F9F)
-          ),)
-        ,
+          ,style: TextStyle(
+              color: Color(0xff303F9F)
+          ),),
         actions: [
           IconButton(onPressed: () { Navigator.push(context,MaterialPageRoute(builder: (context) => const SettingsScreen()),
           );}, icon: Icon(Icons.settings),color: Color(0xffFF4081),),
           PopupMenuButton(
-            icon: Icon(Icons.more_vert,color: Color(0xffFF4081),),
-          color:  Colors.white,
+              icon: Icon(Icons.more_vert,color: Color(0xffFF4081),),
+              color:  Colors.white,
               onSelected:(value){
                 if(value == 1){
                   Navigator.push(context,MaterialPageRoute(builder: (context) => const ProfileScreen()));
 
                 }
                 else {
-                  Navigator.push(context,MaterialPageRoute(builder: (context) => const LoginScreen()));
+                  FirebaseAuth.instance.signOut();
                 }
               }
               ,itemBuilder: (context) => [
@@ -99,9 +98,6 @@ _pickVideo() async {
           ],
           indicatorColor: Color(0xffFF4081),
           labelColor:  Color(0xff303F9F),
-
-
-
         ),
       ),
       body:
@@ -118,7 +114,7 @@ _pickVideo() async {
                   padding: EdgeInsets.fromLTRB(50, 30, 30, 20),
                   margin: EdgeInsets.fromLTRB(5, 10, 5,0),
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                      color: Colors.white,
                       border: Border.all(
                         color: Colors.white,
                       ),
@@ -141,8 +137,6 @@ _pickVideo() async {
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Color(0xff303F9F)),
                         ),
-
-
                         hintText: 'Enter a link...',
                         hintStyle: TextStyle(fontSize: 15.0, color: Colors.grey[600]),
 
@@ -158,6 +152,7 @@ _pickVideo() async {
                         primary: Color(0xffFF4081),
                         onPrimary: Colors.white,
                       ),
+
                       onPressed: () {},
                   ),
                     )
@@ -265,7 +260,6 @@ _pickVideo() async {
                           ),
                         ),
 
-
                           Row(
                               children: [
                                 Padding(
@@ -277,14 +271,14 @@ _pickVideo() async {
                                       fixedSize: Size(100,40),
                                       primary: Color(0xffFF4081),
                                       onPrimary: Colors.white ,
+                                    ),
 
-                                  ), onPressed: () {  },
-
+                                    onPressed: () {
+                                    },
+                                  ),
                                 ),
 
-                                ),
-                              ],
-                          ),
+                              ]),
 
                       ],
                     )
@@ -315,15 +309,14 @@ _pickVideo() async {
                               ),
                             ),
                           ),
-                       
+
                           if(_image!=null)
                             Image.file(_image!)
                             else
-                              
+
                             Row(
                                 children: [
-                                  Padding(
-                                    padding: const EdgeInsets.fromLTRB(180,0,10,0),
+                                  Padding(padding: const EdgeInsets.fromLTRB(180,0,10,0),
                                     child: ElevatedButton (
                                       child: Text("UPLOAD"),
 
@@ -345,19 +338,15 @@ _pickVideo() async {
                       )
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: ElevatedButton (
-                    child: Text("GENERATE"),
-
-                    style: ElevatedButton.styleFrom(
-                      fixedSize: Size(110,40),
-                      primary: Color(0xffFF4081),
-                      onPrimary: Colors.white,
-                    ),
-
-                    onPressed: () {},
+                ElevatedButton (
+                  child: Text("GENERATE"),
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(110,40),
+                    primary: Color(0xffFF4081),
+                    onPrimary: Colors.white,
                   ),
+
+                  onPressed: () {},
                 ),
               ],
             ),

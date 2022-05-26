@@ -2,9 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:untitled/screens/login_screen.dart';
-//import 'package:untitled/screens/login_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
+
 
 
 class SignupScreen extends StatelessWidget {
@@ -155,18 +154,15 @@ class SignupScreen extends StatelessWidget {
 
                               child: Text('Sign Up'),
                               style: OutlinedButton.styleFrom(
-                                primary: Colors.white,
-                                fixedSize: Size(100,40),
-                                backgroundColor: Color(0xffFF4081),
-                                shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.all(
-                                        Radius.circular(10)))
+                                  primary: Colors.white,
+                                  fixedSize: Size(100,40),
+                                  backgroundColor: Color(0xffFF4081),
+                                  shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10)))
                               ),
 
-                              onPressed: () {
-                                Navigator.push(context,MaterialPageRoute(builder: (context) => const LoginScreen()),
-                                );
-                              },
+                              onPressed: () {},
                             )
                         ),
                         Padding(
@@ -194,17 +190,14 @@ class SignupScreen extends StatelessWidget {
                     ),
                     Row(
                       children: <Widget>[
-                         Text('Already have an account?',
+                        Text('Already have an account?',
                           style:TextStyle(color: Colors.grey[600]),),
                         TextButton(
                           child: const Text(
                             'Sign in',
                             style: TextStyle(fontSize: 15,color: Color(0xff303F9F)),
                           ),
-                          onPressed: (){
-                            Navigator.push(context,MaterialPageRoute(builder: (context) => const LoginScreen()),
-                            );
-                          },
+                          onPressed: (){},
                         )
                       ],
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -215,10 +208,3 @@ class SignupScreen extends StatelessWidget {
         )
     );
   }}
-
-
-
-
-
-
-
