@@ -10,14 +10,10 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
       backgroundColor: Colors.cyan[700],
       appBar: AppBar(
         backgroundColor: Colors.blueGrey,
         title: Text('Profile'),),
-=======
-      backgroundColor: Colors.white,
->>>>>>> Gina
       body: SafeArea(
 
         child: Column(
@@ -39,7 +35,7 @@ class ProfileScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xff303F9F),
+                  color: Colors.white,
                 ),
               ),
             ),
@@ -49,7 +45,7 @@ class ProfileScreen extends StatelessWidget {
                   'Email:',
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                    color: Color(0xff303F9F),
+                    color: Colors.white,
 
                     fontSize: 20,
                   ),
@@ -74,7 +70,7 @@ class ProfileScreen extends StatelessWidget {
                   'Number of scanned videos:',
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                    color: Color(0xff303F9F),
+                    color: Colors.white,
 
                     fontSize: 20,
                   ),
@@ -86,7 +82,7 @@ class ProfileScreen extends StatelessWidget {
                   'Number of generated videos:',
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                    color: Color(0xff303F9F),
+                    color: Colors.white,
 
                     fontSize: 20,
                   ),

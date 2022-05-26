@@ -24,37 +24,38 @@ class _LoginScreenState extends State<LoginScreen>{
   @override
   Widget build(BuildContext context) {
   return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.cyan[700],
 
       body:
       SafeArea(
       child: SingleChildScrollView(
 
-<<<<<<< HEAD
       child:Column(
         children: [
           Column(
-=======
 
-      child:Container(
-        padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
-        child: Column(
-          children: [
-            Column(
->>>>>>> Gina
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.center,
 
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisAlignment: MainAxisAlignment.center,
-
-              //ignore: prefer_const_literals_to_create_immutables
-              children: [
-                const Text(
-                  'Fake Media Detection',
-                 textAlign: TextAlign.center,
+            //ignore: prefer_const_literals_to_create_immutables
+            children: [
+              const Text(
+                'Fake Media Detection',
+               textAlign: TextAlign.center,
+               style: TextStyle(
+                 color: Colors.white,
+                 fontWeight: FontWeight.bold,
+                 fontSize: 27,
+              ),
+            ),
+             Padding(
+               padding: const EdgeInsets.only(top: 40.0, left: 25.0, bottom: 20.0),
+               child: const Text(
+                 'Login',
+                 textAlign: TextAlign.left,
                  style: TextStyle(
-                   color: Color(0xff303F9F),
+                   color: Colors.white,
                    fontWeight: FontWeight.bold,
-<<<<<<< HEAD
                    fontSize: 20,
                  ),
                ),
@@ -127,131 +128,23 @@ class _LoginScreenState extends State<LoginScreen>{
                       // Navigator.push(context,MaterialPageRoute(builder: (context) => const HomeScreen();
                     },
                   )
-=======
-                   fontSize: 27,
-                ),
->>>>>>> Gina
               ),
-               Padding(
-                 padding: const EdgeInsets.only(top: 40.0, left: 25.0, bottom: 20.0),
-                 child: const Text(
-                   'Login',
-                   textAlign: TextAlign.left,
-                   style: TextStyle(
-                     color: Color(0xff303F9F),
-                     fontWeight: FontWeight.bold,
-                     fontSize: 20,
-                   ),
-                 ),
-        ),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: TextField(
-              keyboardType: TextInputType.emailAddress,
-              style: TextStyle(color: Color(0xff303F9F)),
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xffFF4081)),
-                    borderRadius: BorderRadius.all(
-                        Radius.circular(12.0))),
-
-                focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xffFF4081)),
-                    borderRadius: BorderRadius.all(
-                        Radius.circular(12.0))),
-
-                hintText: 'Email',
-                hintStyle: TextStyle(fontSize: 15.0, color: Colors.grey),
-              ),
-
-
-
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-                top: 1.0, left: 15.0, bottom: 15.0, right: 15.0),
-            child: TextField(
-              obscureText: true,
-              enableSuggestions: false,
-              autocorrect: false,
-              style: TextStyle(color: Color(0xff303F9F)),
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xffFF4081)),
-                    borderRadius: BorderRadius.all(
-                        Radius.circular(12.0))),
-
-                focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xffFF4081)),
-                    borderRadius: BorderRadius.all(
-                        Radius.circular(12.0))),
-
-                hintText: 'Password',
-                hintStyle: TextStyle(fontSize: 15.0, color: Colors.grey),
-              ),
-            ),
-          ),
-                Padding(
-                    padding: const EdgeInsets.only(
-                        bottom: 10.0, left: 100.0, right: 100.0),
-                    child: OutlinedButton(
-
-                      child: Text('Sign In'),
-                      style: OutlinedButton.styleFrom(
-                        primary: Colors.white,
-                        backgroundColor: Color(0xffFF4081),
-                        fixedSize: Size(100,40),
-                        shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(
-                                Radius.circular(10))),
-                      ),
-
-                      onPressed: () {
-                        Navigator.push(context,MaterialPageRoute(builder: (context) => const HomeScreen()),
-                        );
-                      },
-                    )
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 1.0, bottom: 20.0),
-                  child:  Text(
-                    'Or Sign in with',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.grey[600],
-                      fontWeight: FontWeight.bold,
-                      fontSize: 12,
-                    ),
+              Padding(
+                padding: const EdgeInsets.only(top: 1.0, bottom: 20.0),
+                child: const Text(
+                  'Or Sign in with',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
                   ),
                 ),
-              ],
-            ),
-            Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(onPressed: () => _launchURL('https://www.gmail.com'), icon: FaIcon(FontAwesomeIcons.google),color: Color(0xffFF4081),),
-                  IconButton(onPressed: () => _launchURL('https://www.facebook.com'), icon: FaIcon(FontAwesomeIcons.facebook),color: Color(0xffFF4081),),
-                  IconButton(onPressed: ()=> _launchURL('https://www.twitter.com'), icon: FaIcon(FontAwesomeIcons.twitter),color: Color(0xffFF4081),)
-                ]
-            ),
-            Row(
-              children: <Widget>[
-                 Text("Don't have an account?",
-                  style:TextStyle(color: Colors.grey[600]),),
-                TextButton(
-                  child: const Text(
-                    'Sign up',
-                    style: TextStyle(fontSize: 15,color: Color(0xff303F9F)),
-                  ),
-                  onPressed: (){
-                    Navigator.push(context,MaterialPageRoute(builder: (context) => const SignupScreen()),
-                    );
-                  },
-                )
-              ],
+              ),
+            ],
+          ),
+          Row(
               mainAxisAlignment: MainAxisAlignment.center,
-<<<<<<< HEAD
               children: [
                 IconButton(onPressed: () {} , icon: FaIcon(FontAwesomeIcons.google),color: Colors.white,),
                 IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.facebook),color: Colors.white,),
@@ -275,11 +168,7 @@ class _LoginScreenState extends State<LoginScreen>{
             ],
             mainAxisAlignment: MainAxisAlignment.center,
           )],
-=======
-            )],
->>>>>>> Gina
   ),
-      ),
 
   ),
       ),
