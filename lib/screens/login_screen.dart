@@ -34,16 +34,8 @@ class _LoginScreenState extends State<LoginScreen>{
         children: [
           Column(
 
-<<<<<<< HEAD
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.center,
-=======
-      child:Container(
-        padding: EdgeInsets.fromLTRB(0,30, 0, 0),
-        child: Column(
-          children: [
-            Column(
->>>>>>> Gina
 
             //ignore: prefer_const_literals_to_create_immutables
             children: [
