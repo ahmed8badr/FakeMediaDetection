@@ -10,42 +10,39 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.cyan[700],
-      appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
-        title: Text('Profile'),),
+      backgroundColor: Colors.white,
       body: SafeArea(
 
         child: Column(
-             crossAxisAlignment: CrossAxisAlignment.stretch,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
 
             children: [
               CircleAvatar(
-              radius: 50,
-              backgroundColor: Colors.white,
-              backgroundImage: AssetImage("assets/images/pic.jpg"),
+                radius: 50,
+                backgroundColor: Colors.white,
+                backgroundImage: AssetImage("assets/images/pic.jpg"),
 
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 0, vertical: 10),
-              //padding: const EdgeInsets.only(top: 10.0, right: 20),
-              child: Text(
-                "Username",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 0, vertical: 10),
+                //padding: const EdgeInsets.only(top: 10.0, right: 20),
+                child: Text(
+                  "Username",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xff303F9F),
+                  ),
                 ),
               ),
-            ),
               Padding(
                 padding: const EdgeInsets.only(top: 40.0, left: 25.0, bottom: 20.0),
                 child: const Text(
                   'Email:',
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Color(0xff303F9F),
 
                     fontSize: 20,
                   ),
@@ -70,7 +67,7 @@ class ProfileScreen extends StatelessWidget {
                   'Number of scanned videos:',
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Color(0xff303F9F),
 
                     fontSize: 20,
                   ),
@@ -82,35 +79,35 @@ class ProfileScreen extends StatelessWidget {
                   'Number of generated videos:',
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Color(0xff303F9F),
 
                     fontSize: 20,
                   ),
                 ),
               ),
-SfCartesianChart(primaryXAxis: CategoryAxis(),
+              SfCartesianChart(primaryXAxis: CategoryAxis(),
 
-    series: <LineSeries<SalesData, String>>[
-      LineSeries<SalesData, String>(
-        // Bind data source
-          dataSource:  <SalesData>[
-            SalesData('Jan', 35),
-            SalesData('Feb', 28),
-            SalesData('Mar', 34),
-            SalesData('Apr', 32),
-            SalesData('May', 40)
-          ],
-          xValueMapper: (SalesData sales, _) => sales.year,
-          yValueMapper: (SalesData sales, _) => sales.sales
-      )
-    ]
-),
+                  series: <LineSeries<SalesData, String>>[
+                    LineSeries<SalesData, String>(
+                      // Bind data source
+                        dataSource:  <SalesData>[
+                          SalesData('Jan', 35),
+                          SalesData('Feb', 28),
+                          SalesData('Mar', 34),
+                          SalesData('Apr', 32),
+                          SalesData('May', 40)
+                        ],
+                        xValueMapper: (SalesData sales, _) => sales.year,
+                        yValueMapper: (SalesData sales, _) => sales.sales
+                    )
+                  ]
+              ),
 
-       ] ),
+            ] ),
 
 
 
-        ),
+      ),
 
 
 
