@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:untitled/main.dart';
+import 'package:untitled/screens/home_screen.dart';
 import 'package:untitled/screens/signup_screen.dart';
 
 
@@ -285,22 +285,9 @@ class _LoginScreenState extends State<LoginScreen>{
       ),
   );
 }
-  Future signIn() async {
-    showDialog(
-        context: context,
-        barrierDismissible: false,
-      builder: (context)=>Center(child: CircularProgressIndicator()),
-    );
-
-    try{
+  Future signIn() async{
     await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: emailController.text.trim(),
         password: passwordController.text.trim()
     );
-  } on FirebaseAuthException catch (e){
-      print(e);
-    }
-
-    navigatorKey.currentState!.popUntil((route) => route.isFirst);
-
   }}

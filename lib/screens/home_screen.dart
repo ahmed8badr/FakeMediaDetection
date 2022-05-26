@@ -1,7 +1,7 @@
 import 'dart:io';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:untitled/screens/login_screen.dart';
 import 'package:untitled/screens/profile_screen.dart';
 import 'package:video_player/video_player.dart';
 import 'package:untitled/screens/settings_screen.dart';
@@ -81,7 +81,7 @@ _pickVideo() async {
 
                 }
                 else {
-                  FirebaseAuth.instance.signOut();
+                  // Navigator.push(context,MaterialPageRoute(builder: (context) => const LoginScreen()));
                 }
               }
               ,itemBuilder: (context) => [
