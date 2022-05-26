@@ -34,19 +34,9 @@ class _LoginScreenState extends State<LoginScreen>{
         children: [
           Column(
 
-<<<<<<< HEAD
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.center,
 
-=======
-      child:Column(
-        children: [
-          Column(
-
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.center,
-
->>>>>>> parent of 5607858 (gui)
             //ignore: prefer_const_literals_to_create_immutables
             children: [
               const Text(
@@ -73,12 +63,8 @@ class _LoginScreenState extends State<LoginScreen>{
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: TextField(
-<<<<<<< HEAD
             controller: emailController,
             // keyboardType: TextInputType.emailAddress,
-=======
-            keyboardType: TextInputType.emailAddress,
->>>>>>> parent of 5607858 (gui)
             style: TextStyle(color: Colors.white),
             decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
@@ -103,10 +89,7 @@ class _LoginScreenState extends State<LoginScreen>{
           padding: const EdgeInsets.only(
               top: 1.0, left: 15.0, bottom: 15.0, right: 15.0),
           child: TextField(
-<<<<<<< HEAD
             controller: passwordController,
-=======
->>>>>>> parent of 5607858 (gui)
             obscureText: true,
             enableSuggestions: false,
             autocorrect: false,
@@ -141,13 +124,8 @@ class _LoginScreenState extends State<LoginScreen>{
                     ),
 
                     onPressed: () {
-<<<<<<< HEAD
                       signIn();
                       // Navigator.push(context,MaterialPageRoute(builder: (context) => const HomeScreen();
-=======
-                      Navigator.push(context,MaterialPageRoute(builder: (context) => const HomeScreen()),
-                      );
->>>>>>> parent of 5607858 (gui)
                     },
                   )
               ),
@@ -168,15 +146,9 @@ class _LoginScreenState extends State<LoginScreen>{
           Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-<<<<<<< HEAD
                 IconButton(onPressed: () {} , icon: FaIcon(FontAwesomeIcons.google),color: Colors.white,),
                 IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.facebook),color: Colors.white,),
                 IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.twitter),color: Colors.white,)
-=======
-                IconButton(onPressed: () => _launchURL('https://www.gmail.com'), icon: FaIcon(FontAwesomeIcons.google),color: Colors.white,),
-                IconButton(onPressed: () => _launchURL('https://www.facebook.com'), icon: FaIcon(FontAwesomeIcons.facebook),color: Colors.white,),
-                IconButton(onPressed: ()=> _launchURL('https://www.twitter.com'), icon: FaIcon(FontAwesomeIcons.twitter),color: Colors.white,)
->>>>>>> parent of 5607858 (gui)
               ]
           ),
           Row(

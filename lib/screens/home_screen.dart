@@ -57,10 +57,7 @@ _pickVideo() async {
         backgroundColor: Colors.cyan[700],
       appBar: AppBar(
         backgroundColor: Colors.blueGrey,
-<<<<<<< HEAD
         automaticallyImplyLeading: false,
-=======
->>>>>>> parent of 5607858 (gui)
         title: Text('FMD'),
         actions: [
           IconButton(onPressed: () { Navigator.push(context,MaterialPageRoute(builder: (context) => const SettingsScreen()),
@@ -247,27 +244,20 @@ _pickVideo() async {
 
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text('Upload a video from storage',
+                          child: Text('Choose a video from our library',
                             textAlign: TextAlign.left,
                             style: TextStyle(
                               color: Colors.white,
                             ),
                           ),
                         ),
-<<<<<<< HEAD
-=======
-                        if(_video != null)
-                          _videoPlayerController.value.isInitialized ? AspectRatio(aspectRatio: _videoPlayerController.value.aspectRatio,
-                            child: VideoPlayer(_videoPlayerController),): Container()
-                        else
->>>>>>> parent of 5607858 (gui)
 
                           Row(
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.fromLTRB(180,0,10,0),
                                   child: ElevatedButton (
-                                    child: Text("UPLOAD"),
+                                    child: Text("BROWSE"),
 
                                     style: ElevatedButton.styleFrom(
                                       primary: Colors.white,
@@ -275,10 +265,6 @@ _pickVideo() async {
                                     ),
 
                                     onPressed: () {
-<<<<<<< HEAD
-=======
-                                      _pickVideo();
->>>>>>> parent of 5607858 (gui)
                                     },
                                   ),
                                 ),
@@ -344,10 +330,6 @@ _pickVideo() async {
                 ),
                 ElevatedButton (
                   child: Text("GENERATE"),
-<<<<<<< HEAD
-=======
-
->>>>>>> parent of 5607858 (gui)
                   style: ElevatedButton.styleFrom(
                     primary: Colors.white,
                     onPrimary: Colors.black,
