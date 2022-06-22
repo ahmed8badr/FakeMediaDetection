@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
       //
       //   )
 
-      scaffoldMessengerKey: Utils.messengerKey,
+      // scaffoldMessengerKey: Utils.messengerKey,
       navigatorKey: navigatorKey,
       title: 'Fake Media Detection',
       debugShowCheckedModeBanner: false,

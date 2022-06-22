@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:ffi';
 
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -183,7 +182,7 @@ class _SignUpScreenState extends State<SignUpScreen>{
                               child: Text('Sign Up'),
                               style: OutlinedButton.styleFrom(
                                   primary: Colors.white,
-                                  fixedSize: Size(100,40),
+                                  fixedSize: Size(100, 40),
                                   backgroundColor: Color(0xf21d2570),
                                   shape: const RoundedRectangleBorder(
                                       borderRadius: BorderRadius.all(

@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.untitled.app-mergeDebugResources-16:/values-mn/values-mn.xml",
+            "outputFile": "com.example.untitled.app-mergeDebugResources-15:/values-mn/values-mn.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\Gina\\.gradle\\caches\\transforms-3\\e36cb75ae4f72b56337362533afd3af2\\transformed\\core-1.7.0\\res\\values-mn\\values-mn.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "29",
-                        "startColumns": "4",
-                        "startOffsets": "3411",
-                        "endColumns": "100",
-                        "endOffsets": "3507"
-                    }
-                },
                 {
                     "source": "C:\\Users\\Gina\\.gradle\\caches\\transforms-3\\a6cf950dc44d0cd586b21d814246aa96\\transformed\\jetified-play-services-base-17.1.0\\res\\values-mn\\values.xml",
                     "from": {
@@ -35,6 +18,40 @@
                         "startOffsets": "105,217,406,540,649,845,973,1132,1421,1624,1733,1932,2063,2263,2461,2552,2644",
                         "endColumns": "111,188,133,108,195,127,158,138,202,108,198,130,199,197,90,91,105",
                         "endOffsets": "212,401,535,644,840,968,1127,1266,1619,1728,1927,2058,2258,2456,2547,2639,2745"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Gina\\.gradle\\caches\\transforms-3\\c8836a118223bd30dd3e8ba0a2d8ea72\\transformed\\core-1.8.0\\res\\values-mn\\values-mn.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "33",
+                        "startColumns": "4",
+                        "startOffsets": "3833",
+                        "endColumns": "100",
+                        "endOffsets": "3929"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Gina\\.gradle\\caches\\transforms-3\\e387e07d76e620b2d701a87d88b3e822\\transformed\\browser-1.4.0\\res\\values-mn\\values-mn.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,160,264,369",
+                        "endColumns": "104,103,104,107",
+                        "endOffsets": "155,259,364,472"
+                    },
+                    "to": {
+                        "startLines": "20,30,31,32",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "2750,3516,3620,3725",
+                        "endColumns": "104,103,104,107",
+                        "endOffsets": "2850,3615,3720,3828"
                     }
                 },
                 {
@@ -64,11 +81,11 @@
                         "endOffsets": "115,174,239,303,377,451,542,630,711"
                     },
                     "to": {
-                        "startLines": "20,21,22,23,24,25,26,27,28",
+                        "startLines": "21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2750,2815,2874,2939,3003,3077,3151,3242,3330",
+                        "startOffsets": "2855,2920,2979,3044,3108,3182,3256,3347,3435",
                         "endColumns": "64,58,64,63,73,73,90,87,80",
-                        "endOffsets": "2810,2869,2934,2998,3072,3146,3237,3325,3406"
+                        "endOffsets": "2915,2974,3039,3103,3177,3251,3342,3430,3511"
                     }
                 }
             ]
