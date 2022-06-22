@@ -36,7 +36,7 @@ class SignupScreen extends StatelessWidget {
                           'Fake Media Detection',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            color: Color(0xff303F9F),
+                            color: Color(0xf21d2570),
                             fontWeight: FontWeight.bold,
                             fontSize: 27,
 
@@ -48,7 +48,7 @@ class SignupScreen extends StatelessWidget {
                             'Create an account',
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                              color: Color(0xff303F9F),
+                              color: Color(0xf21d2570),
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
                             ),
@@ -61,12 +61,12 @@ class SignupScreen extends StatelessWidget {
                             style: TextStyle(color: Color(0xff303F9F)),
                             decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                                  borderSide: BorderSide(color: Color(0xf21d2570)),
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(12.0))),
 
                               focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                                  borderSide: BorderSide(color: Color(0xf21d2570)),
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(12.0))),
 
@@ -83,12 +83,12 @@ class SignupScreen extends StatelessWidget {
                             style: TextStyle(color: Color(0xff303F9F)),
                             decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                                  borderSide: BorderSide(color: Color(0xf21d2570)),
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(12.0))),
 
                               focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                                  borderSide: BorderSide(color: Color(0xf21d2570)),
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(12.0))),
 
@@ -107,12 +107,12 @@ class SignupScreen extends StatelessWidget {
                             style: TextStyle(color: Color(0xff303F9F)),
                             decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                                  borderSide: BorderSide(color: Color(0xf21d2570)),
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(12.0))),
 
                               focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                                  borderSide: BorderSide(color: Color(0xf21d2570)),
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(12.0))),
 
@@ -133,12 +133,12 @@ class SignupScreen extends StatelessWidget {
                             style: TextStyle(color: Color(0xff303F9F)),
                             decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                                  borderSide: BorderSide(color: Color(0xf21d2570)),
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(12.0))),
 
                               focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                                  borderSide: BorderSide(color: Color(0xf21d2570)),
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(12.0))),
 
@@ -156,7 +156,7 @@ class SignupScreen extends StatelessWidget {
                               style: OutlinedButton.styleFrom(
                                   primary: Colors.white,
                                   fixedSize: Size(100,40),
-                                  backgroundColor: Color(0xffFF4081),
+                                  backgroundColor: Color(0xf21d2570),
                                   shape: const RoundedRectangleBorder(
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(10)))
@@ -183,9 +183,9 @@ class SignupScreen extends StatelessWidget {
                     Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          IconButton(onPressed: () => _launchURL('https://www.gmail.com'), icon: FaIcon(FontAwesomeIcons.google),color: Color(0xffFF4081),),
-                          IconButton(onPressed: () => _launchURL('https://www.facebook.com'), icon: FaIcon(FontAwesomeIcons.facebook),color: Color(0xffFF4081),),
-                          IconButton(onPressed: ()=> _launchURL('https://www.twitter.com'), icon: FaIcon(FontAwesomeIcons.twitter),color: Color(0xffFF4081),)
+                          IconButton(onPressed: () => _launchURL('https://www.gmail.com'), icon: FaIcon(FontAwesomeIcons.google),color: Color(0xf21d2570),),
+                          IconButton(onPressed: () => _launchURL('https://www.facebook.com'), icon: FaIcon(FontAwesomeIcons.facebook),color: Color(0xf21d2570),),
+                          IconButton(onPressed: ()=> _launchURL('https://www.twitter.com'), icon: FaIcon(FontAwesomeIcons.twitter),color: Color(0xf21d2570),)
                         ]
                     ),
                     Row(

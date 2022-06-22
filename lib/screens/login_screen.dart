@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen>{
                 'Fake Media Detection',
                textAlign: TextAlign.center,
                style: TextStyle(
-                 color: Color(0xff303F9F),
+                 color: Color(0xf21d2570),
                   fontWeight: FontWeight.bold,
                   fontSize: 27,
               ),
@@ -55,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen>{
                  'Login',
                  textAlign: TextAlign.left,
                  style: TextStyle(
-                  color: Color(0xff303F9F),
+                  color: Color(0xf21d2570),
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                  ),
@@ -69,12 +69,12 @@ class _LoginScreenState extends State<LoginScreen>{
             style: TextStyle(color: Color(0xff303F9F)),
             decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                  borderSide: BorderSide(color: Color(0xf21d2570)),
                   borderRadius: BorderRadius.all(
                       Radius.circular(12.0))),
 
               focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                  borderSide: BorderSide(color: Color(0xf21d2570)),
                   borderRadius: BorderRadius.all(
                       Radius.circular(12.0))),
 
@@ -97,12 +97,12 @@ class _LoginScreenState extends State<LoginScreen>{
             style: TextStyle(color: Color(0xff303F9F)),
             decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                  borderSide: BorderSide(color: Color(0xf21d2570)),
                   borderRadius: BorderRadius.all(
                       Radius.circular(12.0))),
 
               focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                  borderSide: BorderSide(color: Color(0xf21d2570)),
                   borderRadius: BorderRadius.all(
                       Radius.circular(12.0))),
 
@@ -118,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen>{
                     child: Text('Sign In'),
                     style: OutlinedButton.styleFrom(
                       primary: Colors.white,
-                      backgroundColor: Color(0xffFF4081),
+                      backgroundColor: Color(0xf21d2570),
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
                               Radius.circular(10))),
@@ -146,9 +146,9 @@ class _LoginScreenState extends State<LoginScreen>{
           Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                IconButton(onPressed: () {} , icon: FaIcon(FontAwesomeIcons.google),color: Color(0xffFF4081),),
-                IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.facebook),color: Color(0xffFF4081),),
-                IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.twitter),color: Color(0xffFF4081),)
+                IconButton(onPressed: () {} , icon: FaIcon(FontAwesomeIcons.google),color: Color(0xf21d2570),),
+                IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.facebook),color: Color(0xf21d2570),),
+                IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.twitter),color: Color(0xf21d2570),)
               ]
           ),
           Row(

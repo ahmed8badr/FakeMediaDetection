@@ -54,19 +54,20 @@ _pickVideo() async {
     length: 3,
         child: Scaffold(
         resizeToAvoidBottomInset : false,
-        backgroundColor: Color(0xff303F9F),
+        backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
+        shadowColor: Colors.grey,
         automaticallyImplyLeading: false,
         title: Text('FMD'
           ,style: TextStyle(
-              color: Color(0xff303F9F)
+              color: Color(0xf21d2570)
           ),),
         actions: [
           IconButton(onPressed: () { Navigator.push(context,MaterialPageRoute(builder: (context) => const SettingsScreen()),
-          );}, icon: Icon(Icons.settings),color: Color(0xffFF4081),),
+          );}, icon: Icon(Icons.settings),color: Color(0xf21d2570),),
           PopupMenuButton(
-              icon: Icon(Icons.more_vert,color: Color(0xffFF4081),),
+              icon: Icon(Icons.more_vert,color: Color(0xf21d2570),),
               color:  Colors.white,
               onSelected:(value){
                 if(value == 1){
@@ -79,13 +80,13 @@ _pickVideo() async {
               }
               ,itemBuilder: (context) => [
             PopupMenuItem(
-              child: ListTile(leading: Icon(Icons.portrait,color: Color(0xffFF4081),),title: Text('Profile',style: TextStyle(color:Color(0xff303F9F)),)),
+              child: ListTile(leading: Icon(Icons.portrait,color: Color(0xf21d2570),),title: Text('Profile',style: TextStyle(color:Color(0xff303F9F)),)),
               value: 1,
 
             ),
             PopupMenuItem(
 
-              child: ListTile(leading: Icon(Icons.logout,color: Color(0xffFF4081),),title: Text('Sign Out',style: TextStyle(color: Color(0xff303F9F)),)),
+              child: ListTile(leading: Icon(Icons.logout,color: Color(0xf21d2570),),title: Text('Sign Out',style: TextStyle(color: Color(0xff303F9F)),)),
               value: 2,
             )
           ]),
@@ -96,7 +97,7 @@ _pickVideo() async {
             Tab(text:'GENERATE'),
             Tab(text:'HISTORY')
           ],
-          indicatorColor: Color(0xffFF4081),
+          indicatorColor: Color(0xf21d2570),
           labelColor:  Color(0xff303F9F),
         ),
       ),
@@ -111,34 +112,43 @@ _pickVideo() async {
               Container (
 
                   alignment: Alignment.bottomRight,
+
                   padding: EdgeInsets.fromLTRB(50, 30, 30, 20),
                   margin: EdgeInsets.fromLTRB(5, 10, 5,0),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       border: Border.all(
-                        color: Colors.white,
+                        color: Colors.white
                       ),
-                      borderRadius: BorderRadius.circular(20) // use instead of BorderRadius.all(Radius.circular(20))
+                      borderRadius: BorderRadius.circular(20) ,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0x88262c6b),
+                        blurRadius: 15,
+
+                      )
+                    ]
                   ),
+
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
 
                     Text('Scan a link',
                       style: TextStyle(
-                      color: Color(0xff303F9F),
+                      color: Color(0xf21d2570),
                     ),),
                     TextField(
-                      style: TextStyle(color: Color(0xff303F9F),),
+                      style: TextStyle(color: Color(0xf21d2570),),
                       decoration: InputDecoration(
                         enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Color(0xff303F9F)),
+                          borderSide: BorderSide(color: Color(0x88262c6b)),
                         ),
                         focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Color(0xff303F9F)),
+                          borderSide: BorderSide(color: Color(0x88262c6b)),
                         ),
                         hintText: 'Enter a link...',
-                        hintStyle: TextStyle(fontSize: 15.0, color: Colors.grey[600]),
+                        hintStyle: TextStyle(fontSize: 15.0, color:  Color(0x88262c6b)),
 
                       ),
                     ),
@@ -149,7 +159,7 @@ _pickVideo() async {
                       child: Text("SCAN"),
                       style: ElevatedButton.styleFrom(
                         fixedSize: Size(100,40),
-                        primary: Color(0xffFF4081),
+                        primary: Color(0xf21d2570),
                         onPrimary: Colors.white,
                       ),
 
@@ -165,9 +175,16 @@ _pickVideo() async {
                   decoration: BoxDecoration(
                       color: Colors.white,
                       border: Border.all(
-                        color: Colors.white,
+                          color: Colors.white
                       ),
-                      borderRadius: BorderRadius.circular(20) // use instead of BorderRadius.all(Radius.circular(20))
+                      borderRadius: BorderRadius.circular(20) ,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0x88262c6b),
+                          blurRadius: 15,
+
+                        )
+                      ]
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -179,7 +196,7 @@ _pickVideo() async {
                         child: Text('Upload a video from storage',
                           textAlign: TextAlign.left,
                           style: TextStyle(
-                            color: Color(0xff303F9F),
+                            color:Color(0xf21d2570),
                           ),
                         ),
                       ),
@@ -197,7 +214,7 @@ _pickVideo() async {
 
                               style: ElevatedButton.styleFrom(
                                 fixedSize: Size(100,40),
-                                primary: Color(0xffFF4081),
+                                primary: Color(0xf21d2570),
                                 onPrimary: Colors.white,
                               ),
 
@@ -214,7 +231,7 @@ _pickVideo() async {
                           child: Text("SCAN"),
                           style: ElevatedButton.styleFrom(
                             fixedSize: Size(100,40),
-                            primary: Color(0xffFF4081),
+                            primary: Color(0xf21d2570),
                             onPrimary: Colors.white,
                           ),
 
@@ -241,9 +258,16 @@ _pickVideo() async {
                     decoration: BoxDecoration(
                         color: Colors.white,
                         border: Border.all(
-                          color: Colors.white,
+                          color:Colors.white,
                         ),
-                        borderRadius: BorderRadius.circular(20) // use instead of BorderRadius.all(Radius.circular(20))
+                        borderRadius: BorderRadius.circular(20) ,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color(0x88262c6b),
+                            blurRadius: 15,
+
+                          )
+                        ]// use instead of BorderRadius.all(Radius.circular(20))
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -255,7 +279,7 @@ _pickVideo() async {
                           child: Text('Choose a video from our library',
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                              color: Color(0xff303F9F),
+                              color: Color(0xf21d2570),
                             ),
                           ),
                         ),
@@ -269,7 +293,7 @@ _pickVideo() async {
 
                                     style: ElevatedButton.styleFrom(
                                       fixedSize: Size(100,40),
-                                      primary: Color(0xffFF4081),
+                                      primary: Color(0xf21d2570),
                                       onPrimary: Colors.white ,
                                     ),
 
@@ -287,13 +311,20 @@ _pickVideo() async {
                   child: Container (
                       alignment: Alignment.bottomRight,
                       padding: EdgeInsets.fromLTRB(50, 30, 30, 20),
-                      margin: EdgeInsets.fromLTRB(5, 10, 5,0),
+                      margin: EdgeInsets.fromLTRB(5, 10, 5,20),
                       decoration: BoxDecoration(
-                          color: Colors.white,
+                          color:Colors.white,
                           border: Border.all(
-                            color: Colors.white,
+                            color:Colors.white,
                           ),
-                          borderRadius: BorderRadius.circular(20) // use instead of BorderRadius.all(Radius.circular(20))
+                          borderRadius: BorderRadius.circular(20) ,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0x88262c6b),
+                              blurRadius: 15,
+
+                            )
+                          ]
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -305,7 +336,7 @@ _pickVideo() async {
                             child: Text('Upload a picture from storage',
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                color: Color(0xff303F9F),
+                                color: Color(0xf21d2570),
                               ),
                             ),
                           ),
@@ -322,7 +353,7 @@ _pickVideo() async {
 
                                       style: ElevatedButton.styleFrom(
                                         fixedSize: Size(100,40),
-                                        primary: Color(0xffFF4081),
+                                        primary: Color(0xf21d2570),
                                         onPrimary: Colors.white,
                                       ),
 
@@ -342,7 +373,7 @@ _pickVideo() async {
                   child: Text("GENERATE"),
                   style: ElevatedButton.styleFrom(
                     fixedSize: Size(110,40),
-                    primary: Color(0xffFF4081),
+                    primary: Color(0xf21d2570),
                     onPrimary: Colors.white,
                   ),
 
@@ -357,11 +388,18 @@ _pickVideo() async {
                 padding: EdgeInsets.fromLTRB(50, 30, 50, 20),
                 margin: EdgeInsets.fromLTRB(5, 10, 5,0),
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color:Colors.white ,
                     border: Border.all(
-                      color: Colors.white,
+                      color:Colors.white,
                     ),
-                    borderRadius: BorderRadius.circular(20) // use instead of BorderRadius.all(Radius.circular(20))
+                    borderRadius: BorderRadius.circular(20) ,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0x88262c6b),
+                        blurRadius: 15,
+
+                      )
+                    ]
                 ),
               ),
           )
