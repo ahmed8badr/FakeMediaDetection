@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:untitled/main.dart';
 
+import '../utils.dart';
+
 
 class LoginScreen extends StatefulWidget {
   final VoidCallback onClickedSignUp;
@@ -196,6 +198,7 @@ class _LoginScreenState extends State<LoginScreen>{
     );
   } on FirebaseAuthException catch (e){
       print(e);
+      Utils.showSnackBar(e.message);
     }
 
     navigatorKey.currentState!.popUntil((route) => route.isFirst);
