@@ -1,25 +1,42 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:ffi';
+
+import 'package:email_validator/email_validator.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:untitled/main.dart';
+import 'package:untitled/utils.dart';
 
 
+class SignUpScreen extends StatefulWidget {
+  final Function() onClickedSignIn;
 
-class SignupScreen extends StatelessWidget {
-  const SignupScreen({Key? key}) : super(key: key);
+  @override
+  const SignUpScreen({
+    Key? key,
+    required this.onClickedSignIn,
+  }) : super(key: key);
 
-  void _launchURL(String _url) async =>
-      await launch(_url);
+  @override
+  _SignUpScreenState createState() => _SignUpScreenState();
+}
+class _SignUpScreenState extends State<SignUpScreen>{
+  final formKey = GlobalKey<FormState>();
+  final emailController = TextEditingController();
+  final passwordController=TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-
         body:
         SafeArea(
+          child: Form (
+            key: formKey,
             child: SingleChildScrollView(
-
 
               child:Container(
                 padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
@@ -78,7 +95,8 @@ class SignupScreen extends StatelessWidget {
                         Padding(
                           padding:  const EdgeInsets.only(
                               top: 1.0, left: 15.0, bottom: 15.0, right: 15.0),
-                          child: TextField(
+                          child: TextFormField(
+                            controller: emailController,
                             keyboardType: TextInputType.emailAddress,
                             style: TextStyle(color: Color(0xff303F9F)),
                             decoration: InputDecoration(
@@ -95,12 +113,17 @@ class SignupScreen extends StatelessWidget {
                               hintText: 'Email',
                               hintStyle: TextStyle(fontSize: 15.0, color: Colors.grey),
                             ),
+                            autovalidateMode: AutovalidateMode.onUserInteraction,
+                            validator: (email) => email != null && !EmailValidator.validate(email)
+                                ? 'Enter a valid email'
+                                : null,
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(
                               top: 1.0, left: 15.0, bottom: 15.0, right: 15.0),
-                          child: TextField(
+                          child: TextFormField(
+                            controller: passwordController,
                             obscureText: true,
                             enableSuggestions: false,
                             autocorrect: false,
@@ -120,6 +143,11 @@ class SignupScreen extends StatelessWidget {
                               hintStyle: TextStyle(fontSize: 15.0, color: Colors.grey),
 
                             ),
+                            autovalidateMode: AutovalidateMode.onUserInteraction,
+                            validator: (value) => value != null && value.length < 6
+                            ? 'Enter min. 6 characters'
+                            : null,
+
                           ),
                         ),
 
@@ -155,14 +183,15 @@ class SignupScreen extends StatelessWidget {
                               child: Text('Sign Up'),
                               style: OutlinedButton.styleFrom(
                                   primary: Colors.white,
-                                  fixedSize: Size(100,40),
                                   backgroundColor: Color(0xffFF4081),
                                   shape: const RoundedRectangleBorder(
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(10)))
                               ),
 
-                              onPressed: () {},
+                              onPressed: () {
+                                signUp();
+                              },
                             )
                         ),
                         Padding(
@@ -183,28 +212,55 @@ class SignupScreen extends StatelessWidget {
                     Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          IconButton(onPressed: () => _launchURL('https://www.gmail.com'), icon: FaIcon(FontAwesomeIcons.google),color: Color(0xffFF4081),),
-                          IconButton(onPressed: () => _launchURL('https://www.facebook.com'), icon: FaIcon(FontAwesomeIcons.facebook),color: Color(0xffFF4081),),
-                          IconButton(onPressed: ()=> _launchURL('https://www.twitter.com'), icon: FaIcon(FontAwesomeIcons.twitter),color: Color(0xffFF4081),)
+                          IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.google),color: Color(0xffFF4081),),
+                          IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.facebook),color: Color(0xffFF4081),),
+                          IconButton(onPressed: (){}, icon: FaIcon(FontAwesomeIcons.twitter),color: Color(0xffFF4081),)
                         ]
                     ),
                     Row(
                       children: <Widget>[
-                        Text('Already have an account?',
-                          style:TextStyle(color: Colors.grey[600]),),
-                        TextButton(
-                          child: const Text(
-                            'Sign in',
-                            style: TextStyle(fontSize: 15,color: Color(0xff303F9F)),
-                          ),
-                          onPressed: (){},
-                        )
-                      ],
+                        RichText(
+                            text: TextSpan(
+                                style:TextStyle(color: Colors.grey[600]),
+                                text: "Already have an account? ",
+                                children: [
+                                  TextSpan(
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap= widget.onClickedSignIn,
+                                    text: 'Sign in',
+                                    style: TextStyle(fontSize: 15,color: Color(0xff303F9F)),
+                                  )
+                                ]
+                            ))],
+
                       mainAxisAlignment: MainAxisAlignment.center,
                     )],
                 ),
               ),
             )
-        )
+        ))
     );
-  }}
+  }
+  Future signUp() async {
+    final isValid = formKey.currentState!.validate();
+    if (!isValid) return;
+
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context)=>Center(child: CircularProgressIndicator()),
+    );
+
+    try{
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: emailController.text.trim(),
+          password: passwordController.text.trim()
+      );
+    } on FirebaseAuthException catch (e){
+      print(e);
+      Utils.showSnackBar(e.message);
+    }
+
+    navigatorKey.currentState!.popUntil((route) => route.isFirst);
+  }
+}

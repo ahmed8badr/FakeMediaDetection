@@ -36,6 +36,7 @@ dependencies:
   syncfusion_flutter_charts: ^20.1.55
   firebase_core: ^1.17.0
   firebase_auth: ^3.3.18
+  email_validator: ^2.0.1
 
 dev_dependencies:
   flutter_test:
