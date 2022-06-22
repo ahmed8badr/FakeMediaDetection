@@ -1,11 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/screens/home_screen.dart';
-import 'package:untitled/screens/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:untitled/utils.dart';
 import 'firebase_options.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-
+import 'package:untitled/AuthPage.dart';
 
 
 void main() async {
@@ -39,6 +39,7 @@ class MyApp extends StatelessWidget {
       //
       //   )
 
+      scaffoldMessengerKey: Utils.messengerKey,
       navigatorKey: navigatorKey,
       title: 'Fake Media Detection',
       debugShowCheckedModeBanner: false,
@@ -60,7 +61,7 @@ class MainPage extends StatelessWidget{
         } else if(snapshot.hasData){
           return HomeScreen();
         } else {
-        return LoginScreen();
+        return AuthPage();
         }
       },
     ),

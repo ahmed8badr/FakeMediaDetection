@@ -1,11 +1,17 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:untitled/main.dart';
-import 'package:untitled/screens/signup_screen.dart';
 
 
 class LoginScreen extends StatefulWidget {
+  final VoidCallback onClickedSignUp;
+  const LoginScreen({
+    Key? key,
+    required this.onClickedSignUp,
+}) : super(key: key);
+
   @override
 _LoginScreenState createState() => _LoginScreenState();
 }
@@ -65,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen>{
           padding: const EdgeInsets.all(15.0),
           child: TextField(
             controller: emailController,
-            // keyboardType: TextInputType.emailAddress,
+            keyboardType: TextInputType.emailAddress,
             style: TextStyle(color: Color(0xff303F9F)),
             decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
@@ -153,19 +159,20 @@ class _LoginScreenState extends State<LoginScreen>{
           ),
           Row(
             children: <Widget>[
-              Text("Don't have an account?",
-                style:TextStyle(color: Colors.grey[600]),),
-              TextButton(
-                child: const Text(
-                  'Sign up',
-                  style: TextStyle(fontSize: 15,color: Color(0xff303F9F)),
-                ),
-                onPressed: (){
-                  Navigator.push(context,MaterialPageRoute(builder: (context) => const SignupScreen()),
-                  );
-                },
-              )
-            ],
+              RichText(
+                  text: TextSpan(
+                    style:TextStyle(color: Colors.grey[600]),
+                    text: "Don't have an account? ",
+                    children: [
+                      TextSpan(
+                        recognizer: TapGestureRecognizer()
+                            ..onTap=widget.onClickedSignUp,
+                        text: 'Sign up',
+                        style: TextStyle(fontSize: 15,color: Color(0xff303F9F)),
+                      )
+                    ]
+                  ))],
+
             mainAxisAlignment: MainAxisAlignment.center,
           )],
   ),
