@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:ffi';
 
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -53,7 +52,7 @@ class _SignUpScreenState extends State<SignUpScreen>{
                           'Fake Media Detection',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            color: Color(0xff303F9F),
+                            color: Color(0xf21d2570),
                             fontWeight: FontWeight.bold,
                             fontSize: 27,
 
@@ -65,7 +64,7 @@ class _SignUpScreenState extends State<SignUpScreen>{
                             'Create an account',
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                              color: Color(0xff303F9F),
+                              color: Color(0xf21d2570),
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
                             ),
@@ -78,12 +77,12 @@ class _SignUpScreenState extends State<SignUpScreen>{
                             style: TextStyle(color: Color(0xff303F9F)),
                             decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                                  borderSide: BorderSide(color: Color(0xf21d2570)),
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(12.0))),
 
                               focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                                  borderSide: BorderSide(color: Color(0xf21d2570)),
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(12.0))),
 
@@ -101,12 +100,12 @@ class _SignUpScreenState extends State<SignUpScreen>{
                             style: TextStyle(color: Color(0xff303F9F)),
                             decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                                  borderSide: BorderSide(color: Color(0xf21d2570)),
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(12.0))),
 
                               focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                                  borderSide: BorderSide(color: Color(0xf21d2570)),
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(12.0))),
 
@@ -130,12 +129,12 @@ class _SignUpScreenState extends State<SignUpScreen>{
                             style: TextStyle(color: Color(0xff303F9F)),
                             decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                                  borderSide: BorderSide(color: Color(0xf21d2570)),
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(12.0))),
 
                               focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                                  borderSide: BorderSide(color: Color(0xf21d2570)),
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(12.0))),
 
@@ -161,12 +160,12 @@ class _SignUpScreenState extends State<SignUpScreen>{
                             style: TextStyle(color: Color(0xff303F9F)),
                             decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                                  borderSide: BorderSide(color: Color(0xf21d2570)),
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(12.0))),
 
                               focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffFF4081)),
+                                  borderSide: BorderSide(color: Color(0xf21d2570)),
                                   borderRadius: BorderRadius.all(
                                       Radius.circular(12.0))),
 
@@ -183,7 +182,8 @@ class _SignUpScreenState extends State<SignUpScreen>{
                               child: Text('Sign Up'),
                               style: OutlinedButton.styleFrom(
                                   primary: Colors.white,
-                                  backgroundColor: Color(0xffFF4081),
+                                  fixedSize: Size(100, 40),
+                                  backgroundColor: Color(0xf21d2570),
                                   shape: const RoundedRectangleBorder(
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(10)))
@@ -212,9 +212,9 @@ class _SignUpScreenState extends State<SignUpScreen>{
                     Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.google),color: Color(0xffFF4081),),
-                          IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.facebook),color: Color(0xffFF4081),),
-                          IconButton(onPressed: (){}, icon: FaIcon(FontAwesomeIcons.twitter),color: Color(0xffFF4081),)
+                          IconButton(onPressed: () => {}, icon: FaIcon(FontAwesomeIcons.google),color: Color(0xf21d2570),),
+                          IconButton(onPressed: () => {}, icon: FaIcon(FontAwesomeIcons.facebook),color: Color(0xf21d2570),),
+                          IconButton(onPressed: ()=> {}, icon: FaIcon(FontAwesomeIcons.twitter),color: Color(0xf21d2570),)
                         ]
                     ),
                     Row(

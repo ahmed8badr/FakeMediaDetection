@@ -6,11 +6,11 @@ class SettingsScreen extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff303F9F),
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: BackButton(color: Colors.pinkAccent,onPressed: ()=> Navigator.pop(context, false)),
-        title: Text('Settings',style: TextStyle(color: Color(0xff303F9F)),),
+        leading: BackButton(color: Color(0xf21d2570),onPressed: ()=> Navigator.pop(context, false)),
+        title: Text('Settings',style: TextStyle(color: Color(0xf21d2570)),),
       ),
       body:
 
@@ -22,9 +22,9 @@ class SettingsScreen extends StatelessWidget {
               'Network',
               textAlign: TextAlign.left,
               style: TextStyle(
-                color: Colors.white,
+                color: Color(0xf21d2570),
                 fontWeight: FontWeight.bold,
-                fontSize: 14,
+                fontSize: 16,
               ),
             ),
           ),
@@ -34,8 +34,8 @@ class SettingsScreen extends StatelessWidget {
               'Mobile Data',
               textAlign: TextAlign.left,
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
+                color:Color(0xf21d2570),
+                fontSize: 18,
               ),
             ),
           ),
@@ -45,7 +45,7 @@ class SettingsScreen extends StatelessWidget {
               'When scanning online, upload will be performed under any network connection',
               textAlign: TextAlign.left,
               style: TextStyle(
-                color: Colors.white,
+                color: Color(0xf21d2570),
                 fontSize: 16,
               ),
             ),
