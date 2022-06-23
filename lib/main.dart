@@ -6,6 +6,7 @@ import 'package:untitled/utils.dart';
 import 'firebase_options.dart';
 // import 'package:responsive_framework/responsive_framework.dart';
 import 'package:untitled/AuthPage.dart';
+import 'package:untitled/verify_email_page.dart';
 
 
 void main() async {
@@ -59,7 +60,7 @@ class MainPage extends StatelessWidget{
         } else if(snapshot.hasError){
           return Center(child: Text('Something went wrong!'));
         } else if(snapshot.hasData){
-          return HomeScreen();
+          return VerifyEmailPage();
         } else {
         return AuthPage();
         }
