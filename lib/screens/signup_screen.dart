@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
@@ -25,7 +26,8 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen>{
   final formKey = GlobalKey<FormState>();
   final emailController = TextEditingController();
-  final passwordController=TextEditingController();
+  final passwordController = TextEditingController();
+  final usernameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +74,8 @@ class _SignUpScreenState extends State<SignUpScreen>{
                         ),
                         Padding(
                           padding: const EdgeInsets.all(15.0),
-                          child: TextField(
+                          child: TextFormField(
+                            controller: usernameController,
                             keyboardType: TextInputType.name,
                             style: TextStyle(color: Color(0xff303F9F)),
                             decoration: InputDecoration(
@@ -191,6 +194,11 @@ class _SignUpScreenState extends State<SignUpScreen>{
 
                               onPressed: () {
                                 signUp();
+                              //   final user = User(
+                              //     email: emailController.text,
+                              //     username: usernameController.text
+                              //   );
+                              //   createUser(user);
                               },
                             )
                         ),
@@ -241,6 +249,16 @@ class _SignUpScreenState extends State<SignUpScreen>{
         ))
     );
   }
+
+  // Future createUser(User user) async{
+  //     final docUser = FirebaseFirestore.instance.collection('users').doc();
+  //     user.id = docUser.id;
+  //     final json = user.toJson();
+  //     await docUser.set(json);
+  // }
+
+
+
   Future signUp() async {
     final isValid = formKey.currentState!.validate();
     if (!isValid) return;
@@ -264,3 +282,19 @@ class _SignUpScreenState extends State<SignUpScreen>{
     navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }
 }
+// class User{
+//   String id;
+//   final String email;
+//   final String username;
+//
+//   User({
+//     this.id='',
+//     required this.username,
+//     required this.email,
+//   });
+//   Map<String, dynamic> toJson()=>{
+//     'id':id,
+//     'username':username,
+//     'email':email,
+//   };
+// }
