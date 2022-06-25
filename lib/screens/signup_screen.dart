@@ -26,9 +26,11 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen>{
   final formKey = GlobalKey<FormState>();
   final emailController = TextEditingController();
-  final passwordController = TextEditingController();
+  final passwordController=TextEditingController();
+  final confirmPassController=TextEditingController();
   final usernameController = TextEditingController();
-
+  bool _isHidden = true;
+  bool _isHidden1 = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,28 +74,7 @@ class _SignUpScreenState extends State<SignUpScreen>{
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: TextFormField(
-                            controller: usernameController,
-                            keyboardType: TextInputType.name,
-                            style: TextStyle(color: Color(0xff303F9F)),
-                            decoration: InputDecoration(
-                              enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xf21d2570)),
-                                  borderRadius: BorderRadius.all(
-                                      Radius.circular(12.0))),
 
-                              focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xf21d2570)),
-                                  borderRadius: BorderRadius.all(
-                                      Radius.circular(12.0))),
-
-                              hintText: 'Username',
-                              hintStyle: TextStyle(fontSize: 15.0, color: Colors.grey),
-                            ),
-                          ),
-                        ),
                         Padding(
                           padding:  const EdgeInsets.only(
                               top: 1.0, left: 15.0, bottom: 15.0, right: 15.0),
@@ -121,12 +102,13 @@ class _SignUpScreenState extends State<SignUpScreen>{
                                 : null,
                           ),
                         ),
+
                         Padding(
                           padding: const EdgeInsets.only(
                               top: 1.0, left: 15.0, bottom: 15.0, right: 15.0),
                           child: TextFormField(
                             controller: passwordController,
-                            obscureText: true,
+                            obscureText: _isHidden,
                             enableSuggestions: false,
                             autocorrect: false,
                             style: TextStyle(color: Color(0xff303F9F)),
@@ -143,6 +125,11 @@ class _SignUpScreenState extends State<SignUpScreen>{
 
                               hintText: 'Password',
                               hintStyle: TextStyle(fontSize: 15.0, color: Colors.grey),
+                              suffix: InkWell(
+                                  onTap: _togglePasswordView,
+                                  child: Icon(_isHidden
+                                      ?Icons.visibility
+                                      :Icons.visibility_off,color: Color(0xf21d2570),))
 
                             ),
                             autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -156,8 +143,9 @@ class _SignUpScreenState extends State<SignUpScreen>{
                         Padding(
                           padding: const EdgeInsets.only(
                               top: 1.0, left: 15.0, bottom: 20.0, right: 15.0),
-                          child: TextField(
-                            obscureText: true,
+                          child: TextFormField(
+                          controller: confirmPassController,
+                          obscureText: _isHidden1,
                             enableSuggestions: false,
                             autocorrect: false,
                             style: TextStyle(color: Color(0xff303F9F)),
@@ -174,7 +162,19 @@ class _SignUpScreenState extends State<SignUpScreen>{
 
                               hintText: 'Retype Password',
                               hintStyle: TextStyle(fontSize: 15.0, color: Colors.grey),
+                              suffix: InkWell(
+                                  onTap: _togglePasswordView1,
+                                  child: Icon(_isHidden1
+                                        ?Icons.visibility
+                                        :Icons.visibility_off,color: Color(0xf21d2570),))
+
                             ),
+                            // autovalidateMode: AutovalidateMode.onUserInteraction,
+                            // validator: (value) {
+                            // if (value!= passwordController.text)
+                            //   Utils.showSnackBar('Please Retype Password');
+                            // }
+
                           ),
                         ),
                         Padding(
@@ -249,16 +249,7 @@ class _SignUpScreenState extends State<SignUpScreen>{
         ))
     );
   }
-
-  // Future createUser(User user) async{
-  //     final docUser = FirebaseFirestore.instance.collection('users').doc();
-  //     user.id = docUser.id;
-  //     final json = user.toJson();
-  //     await docUser.set(json);
-  // }
-
-
-
+  
   Future signUp() async {
     final isValid = formKey.currentState!.validate();
     if (!isValid) return;
@@ -269,32 +260,32 @@ class _SignUpScreenState extends State<SignUpScreen>{
       builder: (context)=>Center(child: CircularProgressIndicator()),
     );
 
-    try{
-      await FirebaseAuth.instance.createUserWithEmailAndPassword(
-          email: emailController.text.trim(),
-          password: passwordController.text.trim()
-      );
-    } on FirebaseAuthException catch (e){
-      print(e);
-      Utils.showSnackBar(e.message);
+    if (passwordController.text != confirmPassController.text){
+        Utils.showSnackBar('Passwords not match')  ;
+    }else {
+      try {
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(
+            email: emailController.text.trim(),
+            password: passwordController.text.trim()
+        );
+      } on FirebaseAuthException catch (e) {
+        print(e);
+        Utils.showSnackBar(e.message);
+      }
     }
-
     navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }
+
+  void _togglePasswordView() {
+    setState(() {
+      _isHidden = !_isHidden;
+    });
+  }
+  void _togglePasswordView1() {
+    setState(() {
+      _isHidden1 = !_isHidden1;
+    });
+  }
 }
-// class User{
-//   String id;
-//   final String email;
-//   final String username;
-//
-//   User({
-//     this.id='',
-//     required this.username,
-//     required this.email,
-//   });
-//   Map<String, dynamic> toJson()=>{
-//     'id':id,
-//     'username':username,
-//     'email':email,
-//   };
-// }
+
+
