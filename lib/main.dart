@@ -1,10 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/screens/home_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:untitled/utils.dart';
 import 'firebase_options.dart';
-// import 'package:responsive_framework/responsive_framework.dart';
 import 'package:untitled/AuthPage.dart';
 import 'package:untitled/verify_email_page.dart';
 
@@ -25,21 +23,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // builder: (context, child) => ResponsiveWrapper.builder(
-      //     BouncingScrollWrapper.builder(context, child!),
-      //     maxWidth: 1200,
-      //     minWidth: 900,
-      //     defaultScale: true,
-      //     breakpoints: [
-      //       const ResponsiveBreakpoint.resize(900, name: MOBILE),
-      //       const ResponsiveBreakpoint.autoScale(800, name: TABLET),
-      //       const ResponsiveBreakpoint.autoScale(1000, name: TABLET),
-      //       const ResponsiveBreakpoint.resize(1200, name: DESKTOP),
-      //       const ResponsiveBreakpoint.autoScale(2460, name: "4K"),
-      //     ],
-      //
-      //   )
-
       scaffoldMessengerKey: Utils.messengerKey,
       navigatorKey: navigatorKey,
       title: 'Fake Media Detection',

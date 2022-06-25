@@ -4,9 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:untitled/screens/profile_screen.dart';
 import 'package:video_player/video_player.dart';
-import 'package:untitled/screens/settings_screen.dart';
-//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,9 +12,7 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-
 class _HomeScreenState extends State<HomeScreen> {
-
 
   late VideoPlayerController _videoPlayerController ;
 
@@ -64,8 +59,6 @@ _pickVideo() async {
               color: Color(0xf21d2570)
           ),),
         actions: [
-          IconButton(onPressed: () { Navigator.push(context,MaterialPageRoute(builder: (context) => const SettingsScreen()),
-          );}, icon: Icon(Icons.settings),color: Color(0xf21d2570),),
           PopupMenuButton(
               icon: Icon(Icons.more_vert,color: Color(0xf21d2570),),
               color:  Colors.white,

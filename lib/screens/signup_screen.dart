@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
@@ -50,7 +49,6 @@ class _SignUpScreenState extends State<SignUpScreen>{
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       mainAxisAlignment: MainAxisAlignment.center,
 
-                      //ignore: prefer_const_literals_to_create_immutables
                       children: [
                         const Text(
                           'Fake Media Detection',
@@ -169,12 +167,6 @@ class _SignUpScreenState extends State<SignUpScreen>{
                                         :Icons.visibility_off,color: Color(0xf21d2570),))
 
                             ),
-                            // autovalidateMode: AutovalidateMode.onUserInteraction,
-                            // validator: (value) {
-                            // if (value!= passwordController.text)
-                            //   Utils.showSnackBar('Please Retype Password');
-                            // }
-
                           ),
                         ),
                         Padding(
@@ -194,11 +186,6 @@ class _SignUpScreenState extends State<SignUpScreen>{
 
                               onPressed: () {
                                 signUp();
-                              //   final user = User(
-                              //     email: emailController.text,
-                              //     username: usernameController.text
-                              //   );
-                              //   createUser(user);
                               },
                             )
                         ),
