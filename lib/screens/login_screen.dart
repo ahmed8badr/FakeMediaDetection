@@ -48,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen>{
             //ignore: prefer_const_literals_to_create_immutables
             children: [
               const Text(
-                'Fake Media Detection',
+                'DEEPECT',
                textAlign: TextAlign.center,
                style: TextStyle(
                  color: Color(0xf21d2570),
@@ -130,7 +130,6 @@ class _LoginScreenState extends State<LoginScreen>{
                           borderRadius: BorderRadius.all(
                               Radius.circular(10))),
                     ),
-
                     onPressed: () {
                       signIn();
                     },
@@ -197,7 +196,7 @@ class _LoginScreenState extends State<LoginScreen>{
     );
   } on FirebaseAuthException catch (e){
       print(e);
-      Utils.showSnackBar(e.message);
+      Utils.showSnackBar(e.message,Colors.red);
     }
 
     navigatorKey.currentState!.popUntil((route) => route.isFirst);

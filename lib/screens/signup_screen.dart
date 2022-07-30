@@ -51,7 +51,7 @@ class _SignUpScreenState extends State<SignUpScreen>{
 
                       children: [
                         const Text(
-                          'Fake Media Detection',
+                          'DEEPECT',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Color(0xf21d2570),
@@ -248,7 +248,7 @@ class _SignUpScreenState extends State<SignUpScreen>{
     );
 
     if (passwordController.text != confirmPassController.text){
-        Utils.showSnackBar('Passwords not match')  ;
+        Utils.showSnackBar('Passwords not match',Colors.red)  ;
     }else {
       try {
         await FirebaseAuth.instance.createUserWithEmailAndPassword(
@@ -257,10 +257,10 @@ class _SignUpScreenState extends State<SignUpScreen>{
         );
       } on FirebaseAuthException catch (e) {
         print(e);
-        Utils.showSnackBar(e.message);
+        Utils.showSnackBar(e.message,Colors.red);
       }
     }
-    navigatorKey.currentState!.popUntil((route) => route.isFirst);
+    // navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }
 
   void _togglePasswordView() {

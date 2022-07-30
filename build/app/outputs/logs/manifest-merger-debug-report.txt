@@ -6,8 +6,10 @@ INJECTED from D:\MTI\Year 4\Grad Proj\fmd\android\app\src\main\AndroidManifest.x
 INJECTED from D:\MTI\Year 4\Grad Proj\fmd\android\app\src\main\AndroidManifest.xml:1:1-42:12
 MERGED from D:\MTI\Year 4\Grad Proj\fmd\android\app\src\main\AndroidManifest.xml:1:1-42:12
 MERGED from [:firebase_auth] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_storage] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [:cloud_firestore] D:\MTI\Year 4\Grad Proj\fmd\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [:firebase_core] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:file_picker] D:\MTI\Year 4\Grad Proj\fmd\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-19:12
 MERGED from [:image_picker_android] D:\MTI\Year 4\Grad Proj\fmd\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-21:12
 MERGED from [:flutter_plugin_android_lifecycle] D:\MTI\Year 4\Grad Proj\fmd\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:url_launcher_android] D:\MTI\Year 4\Grad Proj\fmd\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-16:12
@@ -17,6 +19,7 @@ MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\ahmed\.gradle\ca
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\ahmed\.gradle\caches\transforms-3\192f41984099b44fc2bc0b513ab62adf\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
 MERGED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\caches\transforms-3\6436a8badfb523f09f4e31838989651c\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:17:1-73:12
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\ahmed\.gradle\caches\transforms-3\cf35ff2126a98a624cf1a37280c8605d\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\ahmed\.gradle\caches\transforms-3\47740022feecbf79603d94d078325682\transformed\jetified-firebase-storage-20.0.1\AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\ahmed\.gradle\caches\transforms-3\2f3b6fec8014561e1895d6d78b5c4efa\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0] C:\Users\ahmed\.gradle\caches\transforms-3\b802ecef48116824b2341f34195ea4f0\transformed\jetified-firebase-appcheck-interop-16.0.0\AndroidManifest.xml:15:1-26:12
 MERGED from [com.google.firebase:firebase-common:20.1.1] C:\Users\ahmed\.gradle\caches\transforms-3\3ca342ca25fd9438eb479ac0c7547a73\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:15:1-40:12
@@ -78,6 +81,8 @@ application
 ADDED from D:\MTI\Year 4\Grad Proj\fmd\android\app\src\main\AndroidManifest.xml:3:4-40:19
 MERGED from [:firebase_auth] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_auth] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:cloud_firestore] D:\MTI\Year 4\Grad Proj\fmd\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:cloud_firestore] D:\MTI\Year 4\Grad Proj\fmd\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_core] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
@@ -92,6 +97,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\ca
 MERGED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\caches\transforms-3\6436a8badfb523f09f4e31838989651c\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:26:5-71:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\ahmed\.gradle\caches\transforms-3\cf35ff2126a98a624cf1a37280c8605d\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\ahmed\.gradle\caches\transforms-3\cf35ff2126a98a624cf1a37280c8605d\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\ahmed\.gradle\caches\transforms-3\47740022feecbf79603d94d078325682\transformed\jetified-firebase-storage-20.0.1\AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\ahmed\.gradle\caches\transforms-3\47740022feecbf79603d94d078325682\transformed\jetified-firebase-storage-20.0.1\AndroidManifest.xml:29:5-37:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\ahmed\.gradle\caches\transforms-3\2f3b6fec8014561e1895d6d78b5c4efa\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\ahmed\.gradle\caches\transforms-3\2f3b6fec8014561e1895d6d78b5c4efa\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0] C:\Users\ahmed\.gradle\caches\transforms-3\b802ecef48116824b2341f34195ea4f0\transformed\jetified-firebase-appcheck-interop-16.0.0\AndroidManifest.xml:24:5-20
@@ -166,6 +173,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\ca
 MERGED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\caches\transforms-3\6436a8badfb523f09f4e31838989651c\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\ahmed\.gradle\caches\transforms-3\cf35ff2126a98a624cf1a37280c8605d\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:14:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\ahmed\.gradle\caches\transforms-3\cf35ff2126a98a624cf1a37280c8605d\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\ahmed\.gradle\caches\transforms-3\47740022feecbf79603d94d078325682\transformed\jetified-firebase-storage-20.0.1\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\ahmed\.gradle\caches\transforms-3\47740022feecbf79603d94d078325682\transformed\jetified-firebase-storage-20.0.1\AndroidManifest.xml:27:5-67
 	android:name
 		ADDED from D:\MTI\Year 4\Grad Proj\fmd\android\app\src\main\AndroidManifest.xml:41:22-64
 uses-sdk
@@ -174,10 +183,14 @@ INJECTED from D:\MTI\Year 4\Grad Proj\fmd\android\app\src\main\AndroidManifest.x
 INJECTED from D:\MTI\Year 4\Grad Proj\fmd\android\app\src\main\AndroidManifest.xml
 MERGED from [:firebase_auth] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_auth] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_storage] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_storage] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:cloud_firestore] D:\MTI\Year 4\Grad Proj\fmd\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:cloud_firestore] D:\MTI\Year 4\Grad Proj\fmd\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_core] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_core] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:file_picker] D:\MTI\Year 4\Grad Proj\fmd\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:file_picker] D:\MTI\Year 4\Grad Proj\fmd\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:image_picker_android] D:\MTI\Year 4\Grad Proj\fmd\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:image_picker_android] D:\MTI\Year 4\Grad Proj\fmd\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_plugin_android_lifecycle] D:\MTI\Year 4\Grad Proj\fmd\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
@@ -196,6 +209,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\ca
 MERGED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\caches\transforms-3\6436a8badfb523f09f4e31838989651c\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\ahmed\.gradle\caches\transforms-3\cf35ff2126a98a624cf1a37280c8605d\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\ahmed\.gradle\caches\transforms-3\cf35ff2126a98a624cf1a37280c8605d\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\ahmed\.gradle\caches\transforms-3\47740022feecbf79603d94d078325682\transformed\jetified-firebase-storage-20.0.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\ahmed\.gradle\caches\transforms-3\47740022feecbf79603d94d078325682\transformed\jetified-firebase-storage-20.0.1\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\ahmed\.gradle\caches\transforms-3\2f3b6fec8014561e1895d6d78b5c4efa\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\ahmed\.gradle\caches\transforms-3\2f3b6fec8014561e1895d6d78b5c4efa\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0] C:\Users\ahmed\.gradle\caches\transforms-3\b802ecef48116824b2341f34195ea4f0\transformed\jetified-firebase-appcheck-interop-16.0.0\AndroidManifest.xml:19:5-21:41
@@ -286,6 +301,8 @@ INJECTED from D:\MTI\Year 4\Grad Proj\fmd\android\app\src\debug\AndroidManifest.
 		INJECTED from D:\MTI\Year 4\Grad Proj\fmd\android\app\src\debug\AndroidManifest.xml
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [:firebase_auth] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
 MERGED from [:cloud_firestore] D:\MTI\Year 4\Grad Proj\fmd\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
 MERGED from [:cloud_firestore] D:\MTI\Year 4\Grad Proj\fmd\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
 MERGED from [:firebase_core] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
@@ -294,6 +311,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\ca
 MERGED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\caches\transforms-3\6436a8badfb523f09f4e31838989651c\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:64:9-70:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\ahmed\.gradle\caches\transforms-3\cf35ff2126a98a624cf1a37280c8605d\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:17:9-23:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\ahmed\.gradle\caches\transforms-3\cf35ff2126a98a624cf1a37280c8605d\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\ahmed\.gradle\caches\transforms-3\47740022feecbf79603d94d078325682\transformed\jetified-firebase-storage-20.0.1\AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\ahmed\.gradle\caches\transforms-3\47740022feecbf79603d94d078325682\transformed\jetified-firebase-storage-20.0.1\AndroidManifest.xml:30:9-36:19
 MERGED from [com.google.firebase:firebase-common:20.1.1] C:\Users\ahmed\.gradle\caches\transforms-3\3ca342ca25fd9438eb479ac0c7547a73\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:33:9-37:35
 MERGED from [com.google.firebase:firebase-common:20.1.1] C:\Users\ahmed\.gradle\caches\transforms-3\3ca342ca25fd9438eb479ac0c7547a73\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:33:9-37:35
 	android:exported
@@ -310,6 +329,12 @@ ADDED from [:firebase_auth] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_auth\inte
 		ADDED from [:firebase_auth] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
 		ADDED from [:firebase_auth] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_storage] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [:firebase_storage] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [:firebase_storage] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-126
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
 ADDED from [:cloud_firestore] D:\MTI\Year 4\Grad Proj\fmd\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
@@ -322,6 +347,22 @@ ADDED from [:firebase_core] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_core\inte
 		ADDED from [:firebase_core] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
 		ADDED from [:firebase_core] D:\MTI\Year 4\Grad Proj\fmd\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:file_picker] D:\MTI\Year 4\Grad Proj\fmd\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from [:file_picker] D:\MTI\Year 4\Grad Proj\fmd\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-77
+queries
+ADDED from [:file_picker] D:\MTI\Year 4\Grad Proj\fmd\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-17:15
+intent#action:name:android.intent.action.GET_CONTENT+data:mimeType:*/*
+ADDED from [:file_picker] D:\MTI\Year 4\Grad Proj\fmd\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-16:18
+action#android.intent.action.GET_CONTENT
+ADDED from [:file_picker] D:\MTI\Year 4\Grad Proj\fmd\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-72
+	android:name
+		ADDED from [:file_picker] D:\MTI\Year 4\Grad Proj\fmd\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:13:21-69
+data
+ADDED from [:file_picker] D:\MTI\Year 4\Grad Proj\fmd\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-44
+	android:mimeType
+		ADDED from [:file_picker] D:\MTI\Year 4\Grad Proj\fmd\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:19-41
 provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
 ADDED from [:image_picker_android] D:\MTI\Year 4\Grad Proj\fmd\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
 	android:grantUriPermissions
@@ -362,6 +403,8 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\caches\transforms-3\6436a8badfb523f09f4e31838989651c\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\ahmed\.gradle\caches\transforms-3\cf35ff2126a98a624cf1a37280c8605d\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\ahmed\.gradle\caches\transforms-3\cf35ff2126a98a624cf1a37280c8605d\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\ahmed\.gradle\caches\transforms-3\47740022feecbf79603d94d078325682\transformed\jetified-firebase-storage-20.0.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\ahmed\.gradle\caches\transforms-3\47740022feecbf79603d94d078325682\transformed\jetified-firebase-storage-20.0.1\AndroidManifest.xml:26:5-79
 MERGED from [com.google.android.exoplayer:exoplayer-core:2.17.1] C:\Users\ahmed\.gradle\caches\transforms-3\d5cfdeba7ee6493affc41133a0ee9066\transformed\jetified-exoplayer-core-2.17.1\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.exoplayer:exoplayer-core:2.17.1] C:\Users\ahmed\.gradle\caches\transforms-3\d5cfdeba7ee6493affc41133a0ee9066\transformed\jetified-exoplayer-core-2.17.1\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.exoplayer:exoplayer-common:2.17.1] C:\Users\ahmed\.gradle\caches\transforms-3\830d86d3192eddab57b0348d04cbbac0\transformed\jetified-exoplayer-common-2.17.1\AndroidManifest.xml:24:5-79
@@ -396,14 +439,6 @@ category#android.intent.category.BROWSABLE
 ADDED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\caches\transforms-3\6436a8badfb523f09f4e31838989651c\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:37:17-78
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\caches\transforms-3\6436a8badfb523f09f4e31838989651c\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:37:27-75
-data
-ADDED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\caches\transforms-3\6436a8badfb523f09f4e31838989651c\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:39:17-42:51
-	android:path
-		ADDED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\caches\transforms-3\6436a8badfb523f09f4e31838989651c\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:41:21-37
-	android:host
-		ADDED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\caches\transforms-3\6436a8badfb523f09f4e31838989651c\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:40:21-49
-	android:scheme
-		ADDED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\caches\transforms-3\6436a8badfb523f09f4e31838989651c\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:42:21-48
 activity#com.google.firebase.auth.internal.RecaptchaActivity
 ADDED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\ahmed\.gradle\caches\transforms-3\6436a8badfb523f09f4e31838989651c\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:45:9-62:20
 	android:excludeFromRecents
@@ -430,6 +465,12 @@ ADDED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\ahmed\.gradl
 		ADDED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\ahmed\.gradle\caches\transforms-3\cf35ff2126a98a624cf1a37280c8605d\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:22:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\ahmed\.gradle\caches\transforms-3\cf35ff2126a98a624cf1a37280c8605d\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:21:17-111
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\ahmed\.gradle\caches\transforms-3\47740022feecbf79603d94d078325682\transformed\jetified-firebase-storage-20.0.1\AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\ahmed\.gradle\caches\transforms-3\47740022feecbf79603d94d078325682\transformed\jetified-firebase-storage-20.0.1\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\ahmed\.gradle\caches\transforms-3\47740022feecbf79603d94d078325682\transformed\jetified-firebase-storage-20.0.1\AndroidManifest.xml:34:17-107
 provider#com.google.firebase.provider.FirebaseInitProvider
 ADDED from [com.google.firebase:firebase-common:20.1.1] C:\Users\ahmed\.gradle\caches\transforms-3\3ca342ca25fd9438eb479ac0c7547a73\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:26:9-31:39
 	android:authorities

@@ -10,5 +10,5 @@ public final class BuildConfig {
   // Field from default config.
   public static final String LIBRARY_NAME = "flutter-fire-ml-downloader";
   // Field from default config.
-  public static final String LIBRARY_VERSION = "0.1.0-13";
+  public static final String LIBRARY_VERSION = "0.1.0-15";
 }
