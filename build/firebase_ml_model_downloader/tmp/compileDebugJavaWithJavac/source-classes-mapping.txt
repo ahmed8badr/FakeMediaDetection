@@ -1,6 +1,0 @@
-io/flutter/plugins/firebase/firebase_ml_model_downloader/FirebaseModelDownloaderPlugin.java
- io.flutter.plugins.firebase.firebase_ml_model_downloader.FirebaseModelDownloaderPlugin
-io/flutter/plugins/firebase/firebase_ml_model_downloader/FlutterFirebaseAppRegistrar.java
- io.flutter.plugins.firebase.firebase_ml_model_downloader.FlutterFirebaseAppRegistrar
-io/flutter/plugins/firebase/firebase_ml_model_downloader/BuildConfig.java
- io.flutter.plugins.firebase.firebase_ml_model_downloader.BuildConfig
