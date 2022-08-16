@@ -6,16 +6,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-// import 'package:image_picker/image_picker.dart';
 import 'package:untitled/function.dart';
 import 'package:untitled/screens/profile_screen.dart';
 import 'package:untitled/utils.dart';
-// import 'package:video_player/video_player.dart';
-
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
-
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -34,9 +30,6 @@ class _HomeScreenState extends State<HomeScreen> {
   PlatformFile? _video ;
   PlatformFile? _image;
   UploadTask? uploadTask;
-//  final picker = ImagePicker();
-//  final _picker = ImagePicker();
-//  late VideoPlayerController _videoPlayerController ;
 
   Future uploadVideo()async{
     final file = File(_video!.path!);
@@ -103,18 +96,6 @@ Widget subFunc(Video video){
   Date: ${video.date}
         ''');
   }
-
-
-  // Future<void> _openImagePicker() async {
-  //   final XFile? pickedImage =
-  //   await _picker.pickImage(source: ImageSource.gallery);
-  //   if (pickedImage != null) {
-  //     setState(() {
-  //       _image = File(pickedImage.path);
-  //     });
-  //   }
-  // }
-
 
   Widget buildVideo(Video video) {
     if (video.type==true){
@@ -317,10 +298,6 @@ Widget subFunc(Video video){
                             ),
                           ),
                         ),
-                        // if(_video != null)
-                        //   _videoPlayerController.value.isInitialized ? AspectRatio(aspectRatio: _videoPlayerController.value.aspectRatio,
-                        // child: VideoPlayer(_videoPlayerController),): Container()
-                        // else
 
                         Row(
                           children: [

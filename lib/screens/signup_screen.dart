@@ -1,6 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
-
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
@@ -8,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:untitled/main.dart';
 import 'package:untitled/utils.dart';
-
 
 class SignUpScreen extends StatefulWidget {
   final Function() onClickedSignIn;

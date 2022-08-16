@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:untitled/screens/home_screen.dart';
 import 'package:untitled/utils.dart';
 
-
 class VerifyEmailPage extends StatefulWidget {
   @override
   _VerifyEmailPageState createState() => _VerifyEmailPageState();

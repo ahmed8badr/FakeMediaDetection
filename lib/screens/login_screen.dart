@@ -45,7 +45,6 @@ class _LoginScreenState extends State<LoginScreen>{
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.center,
 
-            //ignore: prefer_const_literals_to_create_immutables
             children: [
               const Text(
                 'DEEPECT',
