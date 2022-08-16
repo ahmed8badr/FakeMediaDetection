@@ -23,4 +23,4 @@ This mobile application is written using Android studio (dart, flutter and fireb
 
 ## Notes
 
-- ML model for detecting and generating fake videos are linked via api queries containing the video url from Firebase Cloud Storage
+- Machine Learning model for detecting and generating fake videos are linked via api queries containing the video url from Firebase Cloud Storage
